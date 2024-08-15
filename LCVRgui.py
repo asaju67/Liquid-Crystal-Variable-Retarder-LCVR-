@@ -28,7 +28,6 @@ class Form(QDialog):
         uic.loadUi('LCVRgui.ui', self)
         self.LCVRin.setSingleStep(0.01)
         self.TEMPin.setSingleStep(0.5)
-        # self.LCVR.setTemp(1, 24)
         self.TEMPout.setText(str(self.LCVR.readSetTemp(1)))
         self.LCVRin.valueChanged.connect(self.setLCVR)
         self.TEMPin.valueChanged.connect(self.setTEMP)
@@ -36,13 +35,6 @@ class Form(QDialog):
         self.quitButton.clicked.connect(self.quit)
         self.refreshButton.clicked.connect(self.readTEMP)
         
-        
-        
-        # self.LCVR.setTemp(1, self.temp)
-        # self.LCVR.setINV(1, self.voltage)
-        # self.TempLCD.display(self.LCVR.readCurrentTemp(1))
-        # self.TEMPout.setText(str(self.LCVR.readSetTemp(1)))
-        # self.VoltageLCD.display(self.voltage)
         
         
     def setLCVR(self):
