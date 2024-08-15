@@ -145,22 +145,22 @@ class D5020(object):
         # self.readCommand()
 
     def setSIN(self,channel, v1, v2, period, phase):
-        self.setCommand("sin:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase)+"<CR>")
+        self.setCommand("sin:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase))
         self.sendCommand()
         self.readCommand()
 
     def setSAW(self,channel, v1, v2, period, phase):
-        self.setCommand("saw:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase)+"<CR>")
+        self.setCommand("saw:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase))
         self.sendCommand()
         self.readCommand()
 
     def setTRI(self,channel, v1, v2, period, phase):
-        self.setCommand("tri:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase)+"<CR>")
+        self.setCommand("tri:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase))
         self.sendCommand()
         self.readCommand()
 
     def setSQR(self,channel, v1, v2, period, phase, dc):
-        self.setCommand("sqr:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase)+","+str(dc)+"<CR>")
+        self.setCommand("sqr:"+str(channel)+","+str(v1)+","+str(v2)+","+str(period)+","+str(phase)+","+str(dc))
         self.sendCommand()
         self.readCommand()
 
